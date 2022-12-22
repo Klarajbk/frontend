@@ -1,0 +1,125 @@
+/*обращение бывают след типов
+   1) теги p
+   2) классы .
+   3) id #
+   4) атрибуты []*/
+
+.fon_yellow{
+    background: rgb(233, 63, 21);
+}
+li{
+    font-size: 12px;
+}
+.second_class{
+    border: 10px solid black;
+}
+
+/*перечисление классов которые находятся в одном сегменте CLASS*/
+/* class="fon_yellow second_class sun help*/
+.fon_yellow.second_class.sun.help{
+    background: yellow;
+}
+/*данная запись трактуется след образом:
+main_menu  -основной родительский блок
+sun        -внутренний элемент который находится внутри блока main_menu
+
+по простому :
+CSS должен найти в HTML класс SUN который находится внутри main_menu*/ 
+.main_menu .sun{
+    background: pink;
+
+}
+/* если нужно указать для нескольких блоков одни и те же цвета,мы можем перечислить id  class / tags / attributes через запятую*/
+.primer div,
+.primer p{
+    background: red;
+}
+#my_id{
+    background: yellow;
+}
+[data-ismar="name"]{
+    background: pink;
+}
+.urok12{
+    background-image: url(https://www.imgonline.com.ua/examples/bee-on-daisy.jpg);
+    height: 500px;
+    background-size: cover;/*-одну картинку растянет на всю ширину;*/
+    background-repeat: no-repeat; 
+   
+    width: 100%;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    /*margin-left: 120px;*/
+    /* px - конкретное заданное число измерения которая не изменяется */
+    /*rem - относительная единица измерения которая базируется от html*/
+    /*em  - относительная единица измерения которая базируется от родителького блока */
+    /*%  - относительная единица измерения которая базируется от ширины экрана либо блока*/
+
+    /* правило 4-х сторон*/
+    /*
+        нужно всегда знать что есть 4 стороны
+        левая сторона 
+        правая сторона 
+        верхняя сторона 
+        нижняя сторона 
+    */
+
+    /*
+        оранжевый цвет - margin  - внешние отступы 
+        желтый цвет    - border  - границы 
+        зеленый цвет   - padding - внутренние отступы
+        синий цает     - контент  содержимое документа
+    */
+} 
+a{
+    display: block;
+    /* block        - блочная структура */
+    /* inline-block - строчная структура */
+    /* flex - удобная адаптация ширины*/
+}
+
+.urok12_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    border: 2px solid black;
+}
+
+.urok12_1 ul{
+    padding: 0;
+}
+
+/*псевдо классы- это событие + обращение к позициям того или иного блока 
+*/
+.urok12_1 ul li:nth-child(3) {
+    background: rgb(189, 219, 16);
+}
+
+.urok12_1 ul li:nth-child(2n) {         /* n-четные числа*/
+    background: rgb(219, 74, 16);
+}
+
+/*задача:
+    по наведению на блок urok12_1 задний фон должен изменится
+    по наведению - :hover;
+    на блок      - .urok12_1
+    
+    что должно произойти?
+
+        задний фон должен изменится 
+             background-color: brown;
+
+*/
+.urok12_1{
+
+    transition: .3s;
+}
+.urok12_1:hover{
+    background-color: brown;
+}
+
+/* .urok12_1- на что должно быть наведено
+:hover      - наведение
+*/
+

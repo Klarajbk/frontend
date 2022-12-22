@@ -1,0 +1,113 @@
+/*обращение бывают след типов
+   1) теги p
+   2) классы .
+   3) id #
+   4) атрибуты []*/
+
+   /*Базовые настройки страницы*/
+   /*------           * - означает обращение ко всем элементам сайта            ------*/
+      *{
+         box-sizing: border-box;
+      }
+      body {
+         margin: 0; 
+
+      }
+   /*Конец базовых настроек страницы*/
+
+   /*Универсальные стили*/
+      /*   , -Это означает дополнительное обращение к тому или иному элементу
+             -Это перечисление подключений новых class'ов*/
+
+      .left, .ul_li li {
+         float: left; 
+            /*float -это обтекание. то есть выравнивание
+            выравнивание: куда;
+            выравнивание: в левую сторону ;float: left;
+             выравнивание: в правую  сторону ;  float: right;
+            */
+      }
+
+      .right {
+         float: right; 
+            /*float -это обтекание. то есть выравнивание
+            выравнивание: куда;
+            выравнивание: в левую сторону ;float: left;
+             выравнивание: в правую  сторону ;  float: right;
+            */
+      }
+
+      .ul_li {
+         list-style: none;
+         display: inline-block;
+         padding: 0;
+         margin: 0;
+      }
+      .ul_li li {
+         padding: 10px 15px;
+      }
+
+      .b-r li{
+         border-right: 1px solid  #f1f1f1;
+
+         /*border-границы
+            границы: ширина тип цвет
+         */
+      }
+
+      .b-r li:last-child{
+         border-right: 0;
+       
+      }
+      .border{
+         border-right: 1px solid #f1f1f1;
+         
+
+      }
+
+
+      .container {
+         width: 1200px;
+         margin: 0 auto;
+         /* margin -это внешний отступ
+                     так же margin является выравниванием
+                     margin: 0 auto; ноль  отступов со всех сторон и это значит выровнить по центру*/
+      }
+
+      .m-l-10 {
+         margin-left: 10px;
+      }
+
+      .red { color: #bc5a6f;}
+      .yellow {color:#ffcc33;}
+      .blue {color: #9dd7f1;}
+
+     
+   /*Конец универсальных стилей*/
+   
+   /*Стили для страницы*/
+
+   /*урок 14*/
+
+   .verhnee_menu {
+      background: #f7f7f7;
+      display: inline-block;
+      width: 100%;  
+   }
+   .center_menu  ul{
+      display: flex;
+         /* display  - Это блок отображения.Возможные вариации отображения. 
+            :flex     - */
+      justify-content: space-between;
+      align-items: center;
+   }
+   
+   
+   .center_menu .right > p:first-child{
+      font-weight: bold;
+      color: #4c4b6c;
+   }
+   .center_menu .right > p {
+      color: #a6a6a6;
+   }
+   /*Конецстилей  для страницы*/
