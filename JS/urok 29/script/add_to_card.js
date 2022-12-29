@@ -109,6 +109,15 @@
     // console.log(ttl[3].innerText);
     // console.log(ttl[4].innerText);
 
- for (let text of ttl){
-    console.log(text.innerText);
- }   
+//  for (let text of ttl){
+    // console.log(text.innerText);
+//  }   
+
+var elements = document.getElementsByClassName(add_card);
+var myFunction = function (){ 
+    var attribute = this.parentNode.parentNode.parentNode.querySelectorAll(".ttl");
+    alert(attribute[0].innerText);
+};
+for (var i=0; i< elements.length; i++){
+    elements[i].addEventListener('click', myFunction,false);
+}
