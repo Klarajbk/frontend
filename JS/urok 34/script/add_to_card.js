@@ -263,7 +263,7 @@ console.log(class_name);
 let myFunction = function(evt) {
     evt.preventDefault();  // блокировка перехода ссылки (внутри href)
 
-    let title = this.parentNode.parentNode.parentNode.parentNode.parentNode.querySelectorAll(".body_title a");
+    let title = this.parentNode.parentNode.parentNode.querySelectorAll(".body_title a");
     let price = this.parentNode.parentNode.parentNode.parentNode.querySelectorAll(".price span");
     let image = this.parentNode.parentNode.parentNode.parentNode.querySelectorAll(".img img");
 
